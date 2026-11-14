@@ -7,10 +7,13 @@ import { PracticeAccordion } from 'components/Index/PracticeAccordion';
 import { TechStack } from 'components/Index/TechStack';
 import { Industries } from 'components/Index/Industries';
 import { AboutMe } from 'components/Index/AboutMe';
+import { DeliveryPipeline } from 'components/Index/DeliveryPipeline';
+import { RecentWork } from 'components/Index/RecentWork';
 import { containerClasses, fancyLinkClasses, linkClasses, sectionBodyClasses } from 'components/styles';
 
 const navigation = [
 	{ label: 'About', href: '#about' },
+	{ label: 'Recent', href: '#recent' },
 	{ label: 'Experience', href: '#experience' },
 	{ label: 'Stack', href: '#stack' },
 	{ label: 'Projects', href: '#projects' },
@@ -35,7 +38,7 @@ const heroLinks = [
 		title: 'Projects',
 		href: 'projects',
 		description:
-			'I build GitOps, CI/CD, multi-region Kubernetes, cloud migration, and DevSecOps automation programs.'
+			'I build GitOps, CI/CD, multi-region Kubernetes, DevSecOps automation, and a vulnerability management product.'
 	},
 	{
 		title: 'Achievements',
@@ -181,6 +184,10 @@ export default function Home() {
 
 						<HeroVisual />
 					</div>
+
+					<div className="mt-16 lg:mt-20">
+						<DeliveryPipeline />
+					</div>
 				</div>
 			</section>
 
@@ -188,10 +195,29 @@ export default function Home() {
 				<AboutMe />
 			</section>
 
-			<section className={`${containerClasses} relative z-10`} id="experience">
+			<section className={`${containerClasses} relative z-10`} id="recent">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
 						<SectionTitle big accentText="02">
+							Recent Work
+						</SectionTitle>
+						<div className={sectionBodyClasses}>
+							<p>
+								What I&apos;ve been building lately: a vulnerability management product, the pipelines that
+								feed it, and the delivery plumbing that keeps releases boring.
+							</p>
+						</div>
+						<div className="mt-10 lg:mt-12">
+							<RecentWork />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className={`${containerClasses} relative z-10`} id="experience">
+				<div className={`${panelClasses} mt-12 lg:mt-16`}>
+					<div className="relative">
+						<SectionTitle big accentText="03">
 							Work Experience
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -216,7 +242,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="stack">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="03">
+						<SectionTitle big accentText="04">
 							Stack
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -241,7 +267,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="projects">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="04">
+						<SectionTitle big accentText="05">
 							Selected Projects
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -260,7 +286,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="achievements">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="05">
+						<SectionTitle big accentText="06">
 							Certifications
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -280,7 +306,7 @@ export default function Home() {
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative grid gap-10 xl:grid-cols-[minmax(0,0.88fr)_minmax(280px,0.52fr)]">
 						<div>
-							<SectionTitle big accentText="06">
+							<SectionTitle big accentText="07">
 								Let&apos;s build something reliable
 							</SectionTitle>
 							<div className={sectionBodyClasses}>

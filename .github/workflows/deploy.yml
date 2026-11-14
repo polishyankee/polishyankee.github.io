@@ -32,14 +32,19 @@ jobs:
       - name: Install deps
         run: npm ci
 
+      # base_path = "/devops-portfolio" for the github.io project URL,
+      # "" once a custom domain is set in Settings -> Pages.
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build (static export via next build)
         run: npm run build
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Show build output (debug)
         run: ls -la && ls -la out || true
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

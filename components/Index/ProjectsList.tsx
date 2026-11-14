@@ -10,6 +10,24 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		title: 'VMS — Vulnerability Management System',
+		description:
+			'Designed and built a vulnerability management product: scan imports (Trivy, Semgrep, SonarQube, Gitleaks, ZAP, pentests) become findings with ownership, SLA and risk acceptance, plus OWASP ASVS assessments, SBOM inventory and a technology lifecycle radar. Delivered as versioned images with a Helm chart and Docker Compose.',
+		tags: ['NestJS', 'Prisma', 'PostgreSQL', 'Next.js', 'Helm', 'OWASP ASVS', 'SBOM', 'S3 / MinIO']
+	},
+	{
+		title: 'Technology discovery feeding VMS from GitLab CI',
+		description:
+			'Built a scanner image that detects runtimes, frameworks, app servers and Kubernetes/OpenShift/Rancher versions in application and deployment repositories, generates one CI job per system, and uploads a sanitized snapshot to VMS.',
+		tags: ['GitLab CI', 'Node.js', 'Docker', 'Helm', 'Inventory']
+	},
+	{
+		title: 'Helm chart consolidation for Rancher and OpenShift',
+		description:
+			'Unified the charts of a banking application family into one shape for RKE2 and OpenShift, added Argo CD-safe Flyway migration hooks, GitOps drift checks, and per-client release packages built from chart tags.',
+		tags: ['Helm', 'OpenShift', 'RKE2', 'Argo CD', 'Flyway', 'GitOps']
+	},
+	{
 		title: "Ansible-managed Kubernetes platform for Poland's largest leasing company",
 		description:
 			'Built a fully declarative Kubernetes platform where Ansible owns the entire cluster lifecycle. Application delivery runs exclusively through GitOps with Argo CD and Flux, with no manual kubectl operations.',

@@ -1,17 +1,4 @@
-const commandLines = [
-	{
-		command: 'ansible-playbook cluster.yml --check',
-		status: 'cluster lifecycle reconciled, zero manual changes'
-	},
-	{
-		command: 'argocd app sync leasing-platform',
-		status: 'desired state applied, no direct kubectl apply -f'
-	},
-	{
-		command: 'flux get kustomizations',
-		status: 'ready — drift = 0 across all clusters'
-	}
-];
+import { OpsConsole } from './OpsConsole';
 
 const metrics = [
 	{ label: 'CI/CD gates', value: '9 / 9 passing' },
@@ -43,7 +30,11 @@ export const HeroVisual = () => (
 							Infrastructure that behaves like a product
 						</h2>
 					</div>
-					<div className="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 font-mono text-[0.7rem] uppercase tracking-[0.24em] text-accent">
+					<div className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 font-mono text-[0.7rem] uppercase tracking-[0.24em] text-accent">
+						<span className="relative flex h-2 w-2" aria-hidden="true">
+							<span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 motion-safe:animate-ping"></span>
+							<span className="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+						</span>
 						Systems nominal
 					</div>
 				</div>
@@ -58,16 +49,7 @@ export const HeroVisual = () => (
 						</span>
 					</div>
 
-					<div className="mt-5 space-y-4">
-						{commandLines.map(({ command, status }) => (
-							<div key={command} className="border border-white/8 bg-white/[0.02] p-4">
-								<div className="overflow-x-auto font-mono text-sm whitespace-nowrap text-accent">
-									$ {command}
-								</div>
-								<div className="mt-2 text-sm leading-6 text-slate-400">{status}</div>
-							</div>
-						))}
-					</div>
+					<OpsConsole />
 				</div>
 
 				<div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -93,14 +75,17 @@ export const HeroVisual = () => (
 							Signal
 						</p>
 						<div className="mt-4 space-y-4">
-							{metrics.map(({ label, value }) => (
+							{metrics.map(({ label, value }, index) => (
 								<div key={label}>
 									<div className="flex items-end justify-between gap-4">
 										<span className="text-sm text-slate-400">{label}</span>
 										<span className="text-sm font-medium text-slate-100">{value}</span>
 									</div>
 									<div className="mt-2 h-1.5 bg-ink-950">
-										<div className="h-full bg-accent"></div>
+										<div
+											className="h-full origin-left bg-accent motion-safe:animate-fill-x"
+											style={{ animationDelay: `${0.3 + index * 0.25}s` }}
+										></div>
 									</div>
 								</div>
 							))}

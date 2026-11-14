@@ -12,13 +12,18 @@ const stack = [
 	{ short: 'OCI', name: 'Oracle Cloud Infrastructure' },
 	{ short: 'AKS', name: 'Azure Kubernetes Service' },
 	{ short: 'RANCHER', name: 'Rancher / RKE2' },
+	{ short: 'OPENSHIFT', name: 'Red Hat OpenShift' },
 	{ short: 'PROMETHEUS', name: 'Prometheus' },
 	{ short: 'GRAFANA', name: 'Grafana' },
 	{ short: 'DYNATRACE', name: 'Dynatrace' },
 	{ short: 'SONARQUBE', name: 'SonarQube' },
 	{ short: 'TRIVY', name: 'Trivy' },
 	{ short: 'KYVERNO', name: 'Kyverno' },
-	{ short: 'OPA', name: 'Open Policy Agent' }
+	{ short: 'OPA', name: 'Open Policy Agent' },
+	{ short: 'SEMGREP', name: 'Semgrep' },
+	{ short: 'NESTJS', name: 'NestJS (TypeScript)' },
+	{ short: 'POSTGRESQL', name: 'PostgreSQL + Prisma' },
+	{ short: 'NEXT.JS', name: 'Next.js' }
 ];
 
 export const TechStack = () => (
