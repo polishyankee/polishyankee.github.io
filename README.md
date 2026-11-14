@@ -17,14 +17,18 @@ wymaga jego tymczasowego przeniesienia.
 Workflow `.github/workflows/deploy.yml` buduje i publikuje stronę przy każdym pushu na `main`
 (Settings → Pages → Source: **GitHub Actions**).
 
+Repo nazywa się `polishyankee.github.io`, więc to strona użytkownika serwowana z root:
+**https://polishyankee.github.io/**
+
 Base path ustawia się sam (`actions/configure-pages` → `PAGES_BASE_PATH`):
 
 | Adres | base path |
 | --- | --- |
-| `https://polishyankee.github.io/devops-portfolio/` | `/devops-portfolio` |
+| `https://polishyankee.github.io/` (repo `polishyankee.github.io`) | brak |
 | własna domena, np. `https://portfolio.example.com/` | brak |
+| strona projektu `https://polishyankee.github.io/<repo>/` | `/<repo>` |
 
-## Własna domena
+## Własna domena (opcjonalnie)
 1. DNS u rejestratora:
    - subdomena (np. `portfolio.example.com` lub `www.example.com`): rekord `CNAME` → `polishyankee.github.io`
    - domena główna (`example.com`): rekordy `A` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
@@ -32,7 +36,6 @@ Base path ustawia się sam (`actions/configure-pages` → `PAGES_BASE_PATH`):
 2. GitHub → profil → Settings → Pages → **Verified domains**: zweryfikuj domenę (rekord TXT), żeby nikt
    inny nie mógł jej podpiąć.
 3. Repo → Settings → Pages → **Custom domain**: wpisz domenę, poczekaj na DNS check, włącz **Enforce HTTPS**.
-4. Uruchom ponownie workflow (Actions → Deploy to GitHub Pages → Run workflow), żeby zbudować stronę
-   bez base path. Stary adres `*.github.io/devops-portfolio/` będzie przekierowywał na nową domenę.
+4. Adres `https://polishyankee.github.io/` będzie przekierowywał na nową domenę.
 
 Plik `CNAME` w repo nie jest potrzebny – przy deployu przez Actions domenę trzyma ustawienie Pages.

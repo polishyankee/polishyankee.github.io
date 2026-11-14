@@ -32,8 +32,8 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      # base_path = "/devops-portfolio" for the github.io project URL,
-      # "" once a custom domain is set in Settings -> Pages.
+      # base_path = "" for the user site (polishyankee.github.io) and a custom domain,
+      # "/<repo>" only if the site is ever served as a project site again.
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5

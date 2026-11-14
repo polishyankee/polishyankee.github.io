@@ -362,7 +362,7 @@ export default function Home() {
 						. Source on{' '}
 						<a
 							className={linkClasses}
-							href="https://github.com/polishyankee/devops-portfolio"
+							href="https://github.com/polishyankee/polishyankee.github.io"
 							target="_blank"
 						>
 							GitHub
