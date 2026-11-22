@@ -33,8 +33,8 @@ export default function Home() {
         <section className="portfolio-shell portfolio-hero" id="top" aria-labelledby="hero-heading">
           <div className="portfolio-copy">
             <p className="portfolio-role">DevOps &amp; platform engineer</p>
-            <h1 id="hero-heading" tabIndex={-1}>I engineer the path to production.</h1>
-            <p>I design and build Linux-first delivery platforms for financial systems. Security checks and release decisions live in the pipeline, with evidence attached to every build.</p>
+            <h1 id="hero-heading" tabIndex={-1}>I build pipelines for production.</h1>
+            <p>I design and build Linux-first delivery platforms for financial systems. My pipelines run security checks, enforce release policies, and attach evidence to each build.</p>
             <div className="portfolio-actions">
               <a className="portfolio-button" href="#vms">Explore VMS</a>
               <a className="portfolio-secondary" href="#projects">Selected work</a>
@@ -49,7 +49,7 @@ export default function Home() {
         <div>
           <p className="portfolio-role">Software development / DevSecOps</p>
           <h2 id="vms-heading">Vulnerability<br />Management System</h2>
-          <p>I designed and built VMS to turn scan results into work teams can own. It tracks findings by product and engagement, records risk acceptance, and follows remediation through closure.</p>
+          <p>I built VMS so teams can assign and resolve findings from security scans. It groups findings by product and engagement, records risk acceptance, and tracks remediation until closure.</p>
         </div>
         <ol aria-label="Finding lifecycle">
           <li><strong>Ingest</strong><span>Trivy, Semgrep, SonarQube, Gitleaks, ZAP and pentest evidence.</span></li>
@@ -65,12 +65,11 @@ export default function Home() {
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
 						<SectionTitle big>
-							Recent Work
+							Recent work
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
 							<p>
-								What I&apos;ve been building lately: a vulnerability management product, the pipelines that
-								feed it, and the delivery plumbing that keeps releases boring.
+								My recent work includes VMS, the pipelines that send data to it, and the automation that supports releases.
 							</p>
 						</div>
 						<div className="mt-10 lg:mt-12">
@@ -84,7 +83,7 @@ export default function Home() {
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
 						<SectionTitle big>
-							Work Experience
+							Work experience
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
 							<p>
@@ -93,8 +92,7 @@ export default function Home() {
 								cooperative banks, and SKOK credit unions.
 							</p>
 							<p>
-								My work spans infrastructure, platform, and application delivery layers with a
-								focus on high availability, security-by-default, and deterministic automation.
+								My work spans infrastructure, platform, and application delivery layers with a focus on high availability, secure defaults, and reproducible automation.
 							</p>
 						</div>
 
@@ -113,8 +111,7 @@ export default function Home() {
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
 							<p>
-								Every project on this page ships through this stack — infrastructure, delivery,
-								security, and observability, wired together end to end.
+								These are the tools I use to provision infrastructure, deploy software, enforce security controls, and monitor production.
 							</p>
 						</div>
 						<div className="mt-10 lg:mt-12">
@@ -134,12 +131,12 @@ export default function Home() {
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
 						<SectionTitle big>
-							Selected Projects
+							Selected projects
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
 							<p>
 								Examples of the delivery platforms, migration programs, and operational controls
-								I&apos;ve built across cloud, Kubernetes, and regulated environments.
+								I&apos;ve built for cloud and Kubernetes workloads, including regulated environments.
 							</p>
 						</div>
 						<div className="mt-10 lg:mt-12">
@@ -157,8 +154,7 @@ export default function Home() {
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
 							<p>
-								Formal validation of the areas I work in most: Kubernetes, DevSecOps, and secure
-								cloud-native delivery.
+								My certifications cover Kubernetes, DevSecOps, and secure cloud-native delivery.
 							</p>
 						</div>
 						<div className="mt-10 lg:mt-12">
@@ -178,8 +174,7 @@ export default function Home() {
 							<div className={sectionBodyClasses}>
 								<p>
 									I&apos;m interested in platform engineering, DevSecOps, cloud automation, and
-									production-grade Kubernetes work. If you want to talk about infrastructure that
-									needs to scale cleanly and fail gracefully, reach out.
+									production-grade Kubernetes work. Get in touch to discuss delivery pipelines, platform design, or production reliability.
 								</p>
 							</div>
 

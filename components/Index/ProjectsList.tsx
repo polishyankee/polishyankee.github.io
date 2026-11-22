@@ -10,13 +10,13 @@ type Project = {
 
 const projects: Project[] = [
 	{
-		title: 'VMS — Vulnerability Management System',
+		title: 'Vulnerability Management System (VMS)',
 		description:
-			'Designed and built a vulnerability management product: scan imports (Trivy, Semgrep, SonarQube, Gitleaks, ZAP, pentests) become findings with ownership, SLA and risk acceptance, plus OWASP ASVS assessments, SBOM inventory and a technology lifecycle radar. Delivered as versioned images with a Helm chart and Docker Compose.',
+			'I designed and built VMS to track findings from Trivy, Semgrep, SonarQube, Gitleaks, ZAP, and penetration tests. It records owners, remediation deadlines, and risk acceptance. It also supports OWASP ASVS assessments, SBOM inventory, and technology lifecycle tracking. I ship versioned images for Helm and Docker Compose.',
 		tags: ['NestJS', 'Prisma', 'PostgreSQL', 'Next.js', 'Helm', 'OWASP ASVS', 'SBOM', 'S3 / MinIO']
 	},
 	{
-		title: 'Technology discovery feeding VMS from GitLab CI',
+		title: 'Technology discovery from GitLab CI to VMS',
 		description:
 			'Built a scanner image that detects runtimes, frameworks, app servers and Kubernetes/OpenShift/Rancher versions in application and deployment repositories, generates one CI job per system, and uploads a sanitized snapshot to VMS.',
 		tags: ['GitLab CI', 'Node.js', 'Docker', 'Helm', 'Inventory']
@@ -24,7 +24,7 @@ const projects: Project[] = [
 	{
 		title: 'Helm chart consolidation for Rancher and OpenShift',
 		description:
-			'Unified the charts of a banking application family into one shape for RKE2 and OpenShift, added Argo CD-safe Flyway migration hooks, GitOps drift checks, and per-client release packages built from chart tags.',
+			'Standardized the Helm charts for a family of banking applications on RKE2 and OpenShift. Added Flyway migration hooks compatible with Argo CD, GitOps drift checks, and client-specific release packages built from chart tags.',
 		tags: ['Helm', 'OpenShift', 'RKE2', 'Argo CD', 'Flyway', 'GitOps']
 	},
 	{
@@ -40,31 +40,31 @@ const projects: Project[] = [
 		tags: ['GitLab CI', 'Argo CD', 'GitOps', 'SonarQube', 'Trivy']
 	},
 	{
-		title: 'Core banking migration: AWS → OCI',
+		title: 'Core banking migration from AWS to OCI',
 		description:
-			'Automated infrastructure and deployments in OCI, reduced costs, and implemented straightforward Disaster Recovery.',
+			'Automated infrastructure and deployments in OCI, reduced costs, and implemented disaster recovery.',
 		tags: ['Terraform', 'OCI', 'Helm', 'Argo CD', 'Prometheus', 'Grafana']
 	},
 	{
-		title: 'Multi-Region Kubernetes (HA) with K8GB and DR',
+		title: 'Highly available Kubernetes across two regions',
 		description:
 			'Built a highly available two-region architecture with global load balancing and a validated DR runbook.',
 		tags: ['Kubernetes', 'K8GB', 'external-dns', 'Velero', 'SLO']
 	},
 	{
-		title: 'Security scanning in pipelines + quality gates',
+		title: 'Pipeline security scanning and quality gates',
 		description:
 			'Integrated SAST, SCA, DAST, and IaC scanning into CI/CD with centralized visibility and enforced quality gates.',
 		tags: ['Semgrep', 'Trivy', 'OWASP ZAP', 'SBOM', 'DefectDojo', 'Kyverno']
 	},
 	{
-		title: 'Azure DevOps → AKS cross-tenant deployments',
+		title: 'Cross-tenant deployments from Azure DevOps to AKS',
 		description:
 			'Enabled secure deployments to resources in another tenant without relying on long-lived secrets.',
 		tags: ['Azure DevOps', 'AKS', 'Entra ID', 'OIDC', 'Workload Identity']
 	},
 	{
-		title: 'Policy-as-code in CI/CD (process standardization)',
+		title: 'Standardizing CI/CD with policy as code',
 		description:
 			'Rolled out a company-wide CI/CD standard with policy-as-code to enforce security and quality controls in pipelines.',
 		tags: ['Policy-as-code', 'OPA', 'Conftest', 'Kyverno', 'Compliance']
@@ -82,7 +82,7 @@ const projects: Project[] = [
 		tags: ['Ansible', 'AWX', 'RHEL 9', 'IaC', 'Automation']
 	},
 	{
-		title: 'Dynatrace Managed + SaaS monitoring implementation',
+		title: 'Monitoring with Dynatrace Managed and SaaS',
 		description:
 			'Deployed end-to-end monitoring for infrastructure and applications with health validation, synthetic checks, and actionable alerting for faster incident response.',
 		tags: ['Dynatrace', 'Managed', 'SaaS', 'Observability', 'Alerting']

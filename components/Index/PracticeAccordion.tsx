@@ -40,7 +40,7 @@ const practice: PracticeItem[] = [
 	},
 	{
 		title: 'Infrastructure as Code',
-		body: 'Ansible owns the full cluster lifecycle; Terraform provisions cloud resources. Every change is versioned and replayable.',
+		body: 'Ansible manages the full cluster lifecycle, and Terraform provisions cloud resources. Both tools apply changes from version-controlled definitions.',
 		panel: {
 			label: 'Automation',
 			rows: [
@@ -52,7 +52,7 @@ const practice: PracticeItem[] = [
 	},
 	{
 		title: 'DevSecOps Controls',
-		body: 'SAST, SCA, DAST, and IaC scanning run in every pipeline with policy-as-code gates that block non-compliant releases.',
+		body: 'Every pipeline runs SAST, SCA, DAST, and infrastructure-as-code scans. Policy gates block releases that fail the required checks.',
 		panel: {
 			label: 'Quality Gates',
 			rows: [
@@ -64,7 +64,7 @@ const practice: PracticeItem[] = [
 	},
 	{
 		title: 'Resilience & Chaos Engineering',
-		body: 'Controlled failure injection on nodes, control-plane components, and storage validates self-healing before it is needed for real.',
+		body: 'Controlled failure injection on nodes, control-plane components, and storage tests whether the platform can recover from failures.',
 		panel: {
 			label: 'DR Posture',
 			rows: [
@@ -76,7 +76,7 @@ const practice: PracticeItem[] = [
 	},
 	{
 		title: 'Observability',
-		body: 'Prometheus, Grafana, and Dynatrace back SLOs and alerting so incidents are caught before customers notice.',
+		body: 'I use Prometheus, Grafana, and Dynatrace to monitor service-level objectives and alert operators to incidents.',
 		panel: {
 			label: 'Signal',
 			rows: [

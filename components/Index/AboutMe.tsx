@@ -8,17 +8,17 @@ const principles = [
 	{
 		title: 'API-first operations',
 		description:
-			'I prefer reproducible systems over hand-tuned infrastructure. Desired state, automation, and versioned change are the baseline — no manual cluster operations, ever.'
+			'I define the desired state in version control and use automation to apply changes to clusters.'
 	},
 	{
 		title: 'Security in the lane',
 		description:
-			'I push security controls into the delivery path itself, so quality gates are mandatory instead of optional.'
+			'I enforce security checks and quality gates as part of every release.'
 	},
 	{
 		title: 'Resilience by rehearsal',
 		description:
-			'I treat chaos validation, recovery testing, and observability as part of delivery, not incident folklore.'
+			'I build failure testing, recovery exercises, and observability into the delivery process.'
 	}
 ];
 
@@ -46,8 +46,7 @@ export const AboutMe = () => {
 				/>
 
 				<motion.p variants={fadeUp} className="mt-4 max-w-[480px] text-base leading-7 text-slate-300">
-					Today I focus on DevOps and platform engineering — CI/CD pipelines, infrastructure automation,
-					and cloud-native environments that let teams ship faster without lowering the quality bar.
+					I build CI/CD pipelines, automate infrastructure, and operate cloud-native platforms so teams can release faster and meet their quality standards.
 				</motion.p>
 
 				<motion.a

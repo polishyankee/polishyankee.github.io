@@ -25,16 +25,16 @@ const recent = [
 	},
 	{
 		kicker: 'Kubernetes · OpenShift',
-		title: 'One Helm chart shape for Rancher and OpenShift',
+		title: 'Shared Helm chart structure for Rancher and OpenShift',
 		description:
-			'Consolidated the charts of a banking application family into one shape that targets both RKE2 and OpenShift (Ingress vs Route), with Flyway migration hooks that survive the first Argo CD sync, drift checks between GitOps values and release packages, and per-client packages built from chart tags with migration guides.',
+			'I standardized the Helm charts for a family of banking applications. The charts use Ingress on RKE2 and Routes on OpenShift. Flyway hooks support the first Argo CD sync, and drift checks compare GitOps values with release packages. Chart tags drive client-specific packages that include migration guides.',
 		tags: ['Helm', 'OpenShift', 'Rancher', 'Argo CD', 'Flyway']
 	},
 	{
 		kicker: 'DevSecOps · Supply chain',
 		title: 'Reusable Trivy scanner with SBOM and Rego gates',
 		description:
-			'A shared scanner image that any GitLab pipeline can call: image and dependency scans, CycloneDX SBOM generation and upload, and Rego policies that decide whether a release may move forward.',
+			'GitLab pipelines use a shared scanner image to scan containers and dependencies, generate a CycloneDX SBOM, and upload it. Rego policies determine whether the release can proceed.',
 		tags: ['Trivy', 'SBOM', 'CycloneDX', 'Rego', 'GitLab CI']
 	}
 ];
@@ -71,20 +71,15 @@ export const RecentWork = () => {
 							variants={fadeUp}
 							className="mt-5 text-2xl font-bold uppercase leading-[1.05] tracking-[-0.02em] text-white sm:text-3xl lg:text-4xl"
 						>
-							VMS — Vulnerability <span className="text-accent">Management</span> System
+							VMS (Vulnerability <span className="text-accent">Management</span> System)
 						</motion.h3>
 
 						<motion.p variants={fadeUp} className="mt-5 text-base leading-7 text-slate-300/85">
-							A platform that brings every security signal and decision into one place. Scan results land as
-							findings linked to products and engagements, with ownership, SLA and risk acceptance tracked
-							until closure — and the same data drives coverage and technology lifecycle views across the
-							whole portfolio.
+							VMS imports scan results as findings linked to products and engagements. It tracks owners, remediation deadlines, and risk acceptance until closure. The same data supports portfolio-wide views of assessment coverage and technology lifecycles.
 						</motion.p>
 
 						<motion.p variants={fadeUp} className="mt-4 text-sm leading-7 text-slate-400">
-							Monorepo with a NestJS + Prisma + PostgreSQL API and a Next.js UI. Ships as versioned images
-							with a migration job, deployed with Docker Compose or its own Helm chart; evidence stored in
-							S3/MinIO.
+							The monorepo contains a NestJS API backed by Prisma and PostgreSQL, plus a Next.js UI. I ship versioned images and a migration job for Docker Compose or Helm deployments. VMS stores evidence in S3 or MinIO.
 						</motion.p>
 
 						<motion.div variants={fadeUp} className="mt-6 flex flex-wrap gap-2">
