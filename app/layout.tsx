@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 
 export const metadata = {
-	title: 'Kamil Stasica'
+	title: 'Kamil Stasica | DevOps & Platform Engineering',
+	description: 'Linux-first CI/CD, DevSecOps and Kubernetes for financial systems. Explore my release pipeline and vulnerability management product.'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

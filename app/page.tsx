@@ -1,196 +1,61 @@
 import { SectionTitle } from 'components/SectionTitle';
-import { LinkToSection } from 'components/Index/LinkToSection';
 import { ProjectsList } from 'components/Index/ProjectsList';
 import { Achievements } from 'components/Index/Achievements';
-import { HeroVisual } from 'components/Index/HeroVisual';
 import { PracticeAccordion } from 'components/Index/PracticeAccordion';
 import { TechStack } from 'components/Index/TechStack';
 import { Industries } from 'components/Index/Industries';
 import { AboutMe } from 'components/Index/AboutMe';
-import { DeliveryPipeline } from 'components/Index/DeliveryPipeline';
 import { RecentWork } from 'components/Index/RecentWork';
-import { containerClasses, fancyLinkClasses, linkClasses, sectionBodyClasses } from 'components/styles';
+import { PipelineDemo } from 'components/Index/PipelineDemo';
+import { containerClasses, linkClasses, sectionBodyClasses } from 'components/styles';
 
-const navigation = [
-	{ label: 'About', href: '#about' },
-	{ label: 'Recent', href: '#recent' },
-	{ label: 'Experience', href: '#experience' },
-	{ label: 'Stack', href: '#stack' },
-	{ label: 'Projects', href: '#projects' },
-	{ label: 'Achievements', href: '#achievements' },
-	{ label: 'Contact', href: '#contact' }
-];
-
-const heroLinks = [
-	{
-		title: 'About Me',
-		href: 'about',
-		description:
-			'I moved from programming into platform engineering because I care about what happens after code ships.'
-	},
-	{
-		title: 'Work Experience',
-		href: 'experience',
-		description:
-			'I design production platforms and delivery standards used in regulated financial environments.'
-	},
-	{
-		title: 'Projects',
-		href: 'projects',
-		description:
-			'I build GitOps, CI/CD, multi-region Kubernetes, DevSecOps automation, and a vulnerability management product.'
-	},
-	{
-		title: 'Achievements',
-		href: 'achievements',
-		description:
-			'I validate the work with certifications focused on Kubernetes, cloud-native operations, and security.'
-	}
-];
-
-const highlights = [
-	{ label: 'Primary focus', value: 'Platform engineering' },
-	{ label: 'Core stack', value: 'Kubernetes, GitOps, CI/CD' },
-	{ label: 'Domain', value: 'Financial services' }
-];
-
+const panelClasses = 'portfolio-panel';
 const availabilityNotes = [
-	'Interested in platform engineering, DevSecOps, cloud automation, and Kubernetes-heavy work.',
-	'Comfortable with high-availability design, migration programs, and regulated delivery environments.',
-	'Best contact path: email or LinkedIn.'
+  'Platform engineering, DevSecOps and production Kubernetes.',
+  'High availability, GitOps migrations and delivery for regulated environments.'
 ];
-
-const panelClasses =
-	'relative overflow-hidden border border-white/10 border-t-2 border-t-accent/50 bg-ink-800/40 p-8 md:p-10 lg:p-12';
 
 export default function Home() {
-	return (
-		<main className="relative overflow-hidden bg-ink-900 text-white">
-			<div className="pointer-events-none absolute inset-0" aria-hidden="true">
-				<div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:88px_88px] opacity-40 [mask-image:radial-gradient(circle_at_center,white,transparent_92%)]"></div>
-			</div>
+  return (
+    <main className="portfolio">
+      <a className="portfolio-skip" href="#top">Skip to content</a>
+      <div className="portfolio-intro">
+        <header className="portfolio-shell portfolio-header">
+          <a className="portfolio-brand" href="#top"><span aria-hidden="true">~/</span> Kamil Stasica</a>
+          <nav aria-label="Main navigation">
+            <a href="#vms">VMS</a>
+            <a href="#experience">Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+        <section className="portfolio-shell portfolio-hero" id="top" aria-labelledby="hero-heading">
+          <div className="portfolio-copy">
+            <p className="portfolio-role">DevOps &amp; platform engineer</p>
+            <h1 id="hero-heading">I engineer the path to production.</h1>
+            <p>I design and build Linux-first delivery platforms for financial systems. Security checks and release decisions live in the pipeline, with evidence attached to every build.</p>
+            <div className="portfolio-actions">
+              <a className="portfolio-button" href="#vms">Explore VMS</a>
+              <a className="portfolio-secondary" href="#projects">Selected work</a>
+            </div>
+            <p className="portfolio-aside">Linux is home. Windows can keep its updates.</p>
+          </div>
+          <PipelineDemo />
+        </section>
+      </div>
 
-			<header className="sticky top-0 z-20 border-b border-white/10 bg-ink-900/95">
-				<div className={`${containerClasses} flex items-center justify-between py-6 lg:py-8`}>
-					<a href="#top" className="inline-flex items-center gap-3">
-						<span className="flex h-11 w-11 items-center justify-center border border-accent/40 bg-ink-800 font-mono text-sm text-accent">
-							KS
-						</span>
-						<span className="hidden sm:block">
-							<span className="block text-sm font-medium text-white">Kamil Stasica</span>
-							<span className="block font-mono text-[0.68rem] uppercase tracking-[0.28em] text-slate-400">
-								DevOps / Platform Engineering
-							</span>
-						</span>
-					</a>
-
-					<nav className="hidden items-center gap-6 lg:flex">
-						{navigation.map(({ label, href }) => (
-							<a
-								key={href}
-								href={href}
-								className="font-mono text-xs uppercase tracking-[0.28em] text-slate-400 transition hover:text-accent"
-							>
-								{label}
-							</a>
-						))}
-					</nav>
-
-					<a
-						href="#contact"
-						className="inline-flex items-center gap-2 border border-accent/40 bg-accent/10 px-4 py-2 font-mono text-xs uppercase tracking-[0.24em] text-accent transition hover:bg-accent/20"
-					>
-						Let&apos;s talk
-						<span aria-hidden="true">→</span>
-					</a>
-				</div>
-			</header>
-
-			<section id="top" className="relative z-10">
-				<div className={`${containerClasses} pb-20 pt-8 lg:pb-28 lg:pt-10`}>
-					<div className="grid min-w-0 items-center gap-16 xl:grid-cols-[minmax(0,1.02fr)_minmax(420px,0.98fr)]">
-						<div className="min-w-0">
-							<span className="inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-4 py-2 font-mono text-[0.7rem] uppercase tracking-[0.32em] text-accent">
-								Platform Engineering • DevSecOps • Kubernetes
-							</span>
-
-							<p className="mt-8 font-mono text-lg font-medium uppercase tracking-[0.34em] text-accent/90 sm:text-xl lg:text-2xl">
-								Kamil Stasica
-							</p>
-							<h1 className="mt-4 max-w-3xl text-3xl font-bold uppercase leading-[0.98] tracking-[-0.02em] text-white sm:text-4xl lg:text-5xl xl:text-[4.2rem]">
-								I build delivery platforms that stay{' '}
-								<span className="text-accent">fast, secure, and calm</span> in production.
-							</h1>
-							<p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300/85 lg:text-xl">
-								I design and operate DevSecOps platforms, Kubernetes foundations, and cloud
-								automation for financial systems where reliability is not optional.
-							</p>
-
-							<div className="mt-10 flex flex-wrap gap-4">
-								<a
-									href="#projects"
-									className="inline-flex items-center gap-2 bg-accent px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.1em] text-ink-950 transition hover:bg-accent/90"
-								>
-									View projects
-									<span aria-hidden="true">→</span>
-								</a>
-								<a
-									href="mailto:stasicakamil@hotmail.com"
-									className="inline-flex items-center justify-center border border-white/15 bg-transparent px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.1em] text-slate-100 transition hover:border-accent/50 hover:text-accent"
-								>
-									Email me
-								</a>
-							</div>
-
-							<div className="mt-10 grid gap-4 md:grid-cols-2">
-								{heroLinks.map(({ title, href, description }) => (
-									<LinkToSection key={href} title={title} href={href}>
-										{description}
-									</LinkToSection>
-								))}
-							</div>
-
-							<dl className="mt-10 grid gap-4 sm:grid-cols-3">
-								{highlights.map(({ label, value }) => (
-									<div key={label} className="border border-white/10 bg-white/[0.02] p-4">
-										<dt className="font-mono text-[0.68rem] uppercase tracking-[0.28em] text-slate-500">
-											{label}
-										</dt>
-										<dd className="mt-3 text-sm text-slate-100 sm:text-base">{value}</dd>
-									</div>
-								))}
-							</dl>
-
-							<div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-xs uppercase tracking-[0.24em] text-slate-400">
-								<a className={fancyLinkClasses} href="mailto:stasicakamil@hotmail.com" target="_blank">
-									Email
-								</a>
-								<a
-									className={fancyLinkClasses}
-									href="https://github.com/polishyankee"
-									target="_blank"
-								>
-									GitHub
-								</a>
-								<a
-									className={fancyLinkClasses}
-									href="https://www.linkedin.com/in/kamil-stasica/"
-									target="_blank"
-								>
-									LinkedIn
-								</a>
-							</div>
-						</div>
-
-						<HeroVisual />
-					</div>
-
-					<div className="mt-16 lg:mt-20">
-						<DeliveryPipeline />
-					</div>
-				</div>
-			</section>
-
+      <section id="vms" className="portfolio-shell portfolio-product" aria-labelledby="vms-heading">
+        <div>
+          <p className="portfolio-role">Software development / DevSecOps</p>
+          <h2 id="vms-heading">Vulnerability<br />Management System</h2>
+          <p>I designed and built VMS to turn scan results into work teams can own. It tracks findings by product and engagement, records risk acceptance, and follows remediation through closure.</p>
+        </div>
+        <ol aria-label="Finding lifecycle">
+          <li><strong>Ingest</strong><span>Trivy, Semgrep, SonarQube, Gitleaks, ZAP and pentest evidence.</span></li>
+          <li><strong>Decide</strong><span>Assign owners, set severity-based SLAs and record approvals.</span></li>
+          <li><strong>Track</strong><span>Follow remediation, ASVS coverage, CycloneDX components and technology lifecycle.</span></li>
+        </ol>
+      </section>
 			<section className={`${containerClasses} relative z-10`} id="about">
 				<AboutMe />
 			</section>
