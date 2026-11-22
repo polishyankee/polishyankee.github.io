@@ -10,16 +10,16 @@ module.exports = {
         sans: ['Space Grotesk', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        homepageIcon: '#B6FF2E',
-        accent: '#B6FF2E',
+        homepageIcon: 'var(--accent)',
+        accent: 'rgb(var(--accent-rgb) / <alpha-value>)',
         ink: {
-          950: '#14171B',
-          900: '#1F2329',
-          800: '#262B32',
-          700: '#333A42',
-          600: '#454E58',
+          950: 'rgb(23 22 21 / <alpha-value>)',
+          900: 'rgb(29 27 25 / <alpha-value>)',
+          800: 'rgb(41 38 35 / <alpha-value>)',
+          700: 'rgb(56 51 46 / <alpha-value>)',
+          600: 'rgb(81 75 68 / <alpha-value>)',
         },
-        slate: colors.slate,
+        slate: { ...colors.stone, 500: colors.stone[400] },
       },
       keyframes: {
         'fade-up': {

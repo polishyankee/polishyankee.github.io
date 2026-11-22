@@ -5,6 +5,8 @@ export const metadata = {
 	description: 'Linux-first CI/CD, DevSecOps and Kubernetes for financial systems. Explore my release pipeline and vulnerability management product.'
 };
 
+export const viewport = { themeColor: '#171615' };
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">

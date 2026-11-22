@@ -6,7 +6,7 @@ import { TechStack } from 'components/Index/TechStack';
 import { Industries } from 'components/Index/Industries';
 import { AboutMe } from 'components/Index/AboutMe';
 import { RecentWork } from 'components/Index/RecentWork';
-import { PipelineDemo } from 'components/Index/PipelineDemo';
+import { DeliveryMap, PipelineIntro } from 'components/Index/PipelineDemo';
 import { containerClasses, linkClasses, sectionBodyClasses } from 'components/styles';
 
 const panelClasses = 'portfolio-panel';
@@ -18,7 +18,8 @@ const availabilityNotes = [
 export default function Home() {
   return (
     <main className="portfolio">
-      <a className="portfolio-skip" href="#top">Skip to content</a>
+      <PipelineIntro />
+      <a className="portfolio-skip" href="#hero-heading">Skip to content</a>
       <div className="portfolio-intro">
         <header className="portfolio-shell portfolio-header">
           <a className="portfolio-brand" href="#top"><span aria-hidden="true">~/</span> Kamil Stasica</a>
@@ -32,7 +33,7 @@ export default function Home() {
         <section className="portfolio-shell portfolio-hero" id="top" aria-labelledby="hero-heading">
           <div className="portfolio-copy">
             <p className="portfolio-role">DevOps &amp; platform engineer</p>
-            <h1 id="hero-heading">I engineer the path to production.</h1>
+            <h1 id="hero-heading" tabIndex={-1}>I engineer the path to production.</h1>
             <p>I design and build Linux-first delivery platforms for financial systems. Security checks and release decisions live in the pipeline, with evidence attached to every build.</p>
             <div className="portfolio-actions">
               <a className="portfolio-button" href="#vms">Explore VMS</a>
@@ -40,7 +41,7 @@ export default function Home() {
             </div>
             <p className="portfolio-aside">Linux is home. Windows can keep its updates.</p>
           </div>
-          <PipelineDemo />
+          <DeliveryMap />
         </section>
       </div>
 
@@ -63,7 +64,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="recent">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="02">
+						<SectionTitle big>
 							Recent Work
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -82,7 +83,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="experience">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="03">
+						<SectionTitle big>
 							Work Experience
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -107,7 +108,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="stack">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="04">
+						<SectionTitle big>
 							Stack
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -132,7 +133,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="projects">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="05">
+						<SectionTitle big>
 							Selected Projects
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -151,7 +152,7 @@ export default function Home() {
 			<section className={`${containerClasses} relative z-10`} id="achievements">
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative">
-						<SectionTitle big accentText="06">
+						<SectionTitle big>
 							Certifications
 						</SectionTitle>
 						<div className={sectionBodyClasses}>
@@ -171,7 +172,7 @@ export default function Home() {
 				<div className={`${panelClasses} mt-12 lg:mt-16`}>
 					<div className="relative grid gap-10 xl:grid-cols-[minmax(0,0.88fr)_minmax(280px,0.52fr)]">
 						<div>
-							<SectionTitle big accentText="07">
+							<SectionTitle big>
 								Let&apos;s build something reliable
 							</SectionTitle>
 							<div className={sectionBodyClasses}>
@@ -185,12 +186,12 @@ export default function Home() {
 							<div className="mt-8 flex flex-wrap gap-4">
 								<a
 									href="mailto:stasicakamil@hotmail.com"
-									className="inline-flex items-center gap-2 bg-accent px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.1em] text-ink-950 transition hover:bg-accent/90"
+									className="inline-flex items-center gap-2 bg-accent px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.1em] text-ink-950 transition-colors hover:bg-accent/90"
 								>
 									stasicakamil@hotmail.com
 								</a>
 								<a
-									className="inline-flex items-center justify-center border border-white/15 bg-transparent px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.1em] text-slate-100 transition hover:border-accent/50 hover:text-accent"
+									className="inline-flex items-center justify-center border border-white/15 bg-transparent px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.1em] text-slate-100 transition-colors hover:border-accent/50 hover:text-accent"
 									href="https://www.linkedin.com/in/kamil-stasica/"
 									target="_blank"
 								>

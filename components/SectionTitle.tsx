@@ -16,10 +16,10 @@ export const SectionTitle = ({
 			</span>
 		)}
 		<div className={big ? 'h-4 md:h-5' : 'h-3 md:h-4'}></div>
-		<h1 className={big ? sectionTitleBigClasses : sectionTitleClasses}>
+		<h2 className={big ? sectionTitleBigClasses : sectionTitleClasses}>
 			{children}
 			{big && <span className="text-accent">.</span>}
-		</h1>
+		</h2>
 		<div className={big ? 'h-6 md:h-8 lg:h-10' : 'h-5 md:h-6'}></div>
 	</>
 );

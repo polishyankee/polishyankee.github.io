@@ -26,7 +26,7 @@ export const AboutMe = () => {
 	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
 	return (
-		<div ref={ref} className="grid gap-10 rounded-2xl bg-accent p-8 text-ink-950 md:p-10 lg:grid-cols-12 lg:gap-8 lg:p-12">
+		<div ref={ref} className="grid gap-10 rounded-2xl border border-white/10 bg-ink-800 p-8 text-white md:p-10 lg:grid-cols-12 lg:gap-8 lg:p-12">
 			<motion.div
 				initial="hidden"
 				animate={inView ? 'visible' : 'hidden'}
@@ -34,18 +34,18 @@ export const AboutMe = () => {
 				className="lg:col-span-6"
 			>
 				<motion.div variants={fadeUp} className="inline-flex items-center gap-3">
-					<span className="border border-ink-950/40 bg-ink-950/10 px-2 py-0.5 font-mono text-[0.7rem] text-ink-950">
+					<span className="border border-white/40 bg-white/10 px-2 py-0.5 font-mono text-[0.7rem] text-accent">
 						01
 					</span>
-					<p className="font-mono text-[0.75rem] uppercase tracking-[0.2em] text-ink-950/80">About</p>
+					<p className="font-mono text-[0.75rem] uppercase tracking-[0.2em] text-slate-300">About</p>
 				</motion.div>
 
 				<RevealHeading
 					text="I moved from writing code to owning what happens after it ships."
-					className="mt-4 max-w-[600px] text-2xl font-bold uppercase leading-[1.1] tracking-[-0.02em] text-ink-950 sm:text-3xl lg:text-4xl"
+					className="mt-4 max-w-[600px] text-2xl font-bold uppercase leading-[1.1] tracking-[-0.02em] text-accent sm:text-3xl lg:text-4xl"
 				/>
 
-				<motion.p variants={fadeUp} className="mt-4 max-w-[480px] text-base leading-7 text-ink-950/80">
+				<motion.p variants={fadeUp} className="mt-4 max-w-[480px] text-base leading-7 text-slate-300">
 					Today I focus on DevOps and platform engineering — CI/CD pipelines, infrastructure automation,
 					and cloud-native environments that let teams ship faster without lowering the quality bar.
 				</motion.p>
@@ -53,7 +53,7 @@ export const AboutMe = () => {
 				<motion.a
 					variants={fadeUp}
 					href="#experience"
-					className="group relative mt-6 inline-flex w-max items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-ink-950 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+					className="group relative mt-6 inline-flex w-max items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-accent after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
 				>
 					Explore experience
 					<span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
@@ -73,10 +73,10 @@ export const AboutMe = () => {
 						key={title}
 						variants={fadeUp}
 						whileHover={{ y: -4 }}
-						className="flex flex-col gap-3 border-t-2 border-ink-950/25 pt-5 transition-colors duration-200 hover:border-ink-950/50"
+						className="flex flex-col gap-3 border-t-2 border-white/25 pt-5 transition-colors duration-200 hover:border-white/50"
 					>
-						<span className="text-lg font-semibold tracking-[-0.01em] text-ink-950">{title}</span>
-						<p className="text-sm leading-6 text-ink-950/75">{description}</p>
+						<span className="text-lg font-semibold tracking-[-0.01em] text-accent">{title}</span>
+						<p className="text-sm leading-6 text-accent/75">{description}</p>
 					</motion.div>
 				))}
 			</motion.div>
